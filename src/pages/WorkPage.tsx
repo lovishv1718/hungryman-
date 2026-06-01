@@ -40,8 +40,8 @@ interface FeaturedPoster {
 }
 
 const featuredPosters: FeaturedPoster[] = [
-  { src: '/poster 1.webp', title: 'Diljit Dosanjh — Born to Shine', category: 'Official Tour Visuals', artist: 'DILJIT DOSANJH', year: '2024', video: '/hungryman_video.mp4', w: 872, h: 863 },
-  { src: '/poster 3.webp', title: 'Karan Aujla — Making Memories', category: 'Album Cover & Visual Identity', artist: 'KARAN AUJLA', year: '2023', video: 'https://test-streams.mux.dev/x36xhg/playlist.m3u8', w: 682, h: 824 },
+  { src: '/poster 1.webp', title: 'Diljit Dosanjh — Born to Shine', category: 'Official Tour Visuals', artist: 'DILJIT DOSANJH', year: '2024', w: 872, h: 863 },
+  { src: '/poster 3.webp', title: 'Karan Aujla — Making Memories', category: 'Album Cover & Visual Identity', artist: 'KARAN AUJLA', year: '2023', w: 682, h: 824 },
   { src: '/poster 5.webp', title: 'Amrit Maan — Babiha', category: 'Cinematic Campaign Poster', artist: 'AMRIT MAAN', year: '2023', w: 866, h: 868 },
   { src: '/poster 7.webp', title: 'Prabh Gill — Editorial Art', category: 'Single Artwork', artist: 'PRABH GILL', year: '2024', w: 700, h: 868 },
 ];
