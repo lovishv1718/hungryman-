@@ -329,7 +329,7 @@ export default function App() {
                 src="/hungryman_logo.webp" 
                 alt="HungryMan Designs Logo" 
                 width={40}
-                height={43}
+                height={40}
                 className="h-10 w-auto object-contain border border-white/10 rounded-sm" 
               />
               <div className="flex flex-col">
