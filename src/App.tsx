@@ -327,14 +327,14 @@ export default function App() {
             <Link to="/" className="flex items-center gap-3 cursor-pointer">
               <img 
                 src="/hungryman_logo.webp" 
-                alt="HungryMan Designs Logo" 
+                alt="Hungryman Productions Logo" 
                 width={40}
                 height={40}
                 className="h-10 w-auto object-contain border border-white/10 rounded-sm" 
               />
               <div className="flex flex-col">
                 <span className="font-kanit font-black tracking-wider text-sm leading-none text-white">HUNGRYMAN</span>
-                <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-warm-orange">DESIGNS</span>
+                <span className="font-sans text-[10px] uppercase tracking-[0.25em] text-warm-orange">PRODUCTIONS</span>
               </div>
             </Link>
 
