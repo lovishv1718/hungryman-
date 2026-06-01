@@ -26,3 +26,7 @@ dist-ssr
 # Zip files
 *.zip
 
+# Image backups
+image_backups/
+
+
