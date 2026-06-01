@@ -179,24 +179,52 @@ export default function AboutPage() {
       <section className="py-32 bg-black/20 backdrop-blur-sm relative border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div className="liquid-glass p-8 md:p-12 rounded-3xl border border-white/5">
-              <span className="font-serif italic text-5xl text-white/10 block mb-4">01</span>
-              <h3 className="font-kanit text-3xl font-black uppercase text-white mb-4 tracking-tight">
-                HUNGRYMAN DESIGNS
-              </h3>
-              <p className="font-sans text-sm text-soft-cream-dim leading-relaxed mb-6 font-light">
-                Our graphics lab focused entirely on official music posters, album covers, and artist visual identity. We work directly with artists to translate sonic notes into static artwork optimized for print and streaming platforms.
-              </p>
+            <div className="liquid-glass p-8 md:p-12 rounded-3xl border border-white/5 flex flex-col justify-between h-full hover:border-white/10 transition-all duration-300 group">
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <span className="font-serif italic text-5xl text-white/10 block leading-none">01</span>
+                  <div className="flex-shrink-0 p-2 bg-white/[0.03] border border-white/10 rounded-2xl backdrop-blur-md shadow-lg group-hover:border-white/20 transition-all duration-300">
+                    <img 
+                      src="/logo_designs.webp" 
+                      alt="Hungryman Designs Logo" 
+                      width={64}
+                      height={64}
+                      loading="lazy"
+                      className="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+                <h3 className="font-kanit text-3xl font-black uppercase text-white mb-4 tracking-tight group-hover:text-warm-orange transition-colors duration-300">
+                  HUNGRYMAN DESIGNS
+                </h3>
+                <p className="font-sans text-sm text-soft-cream-dim leading-relaxed font-light">
+                  Our graphics lab focused entirely on official music posters, album covers, and artist visual identity. We work directly with artists to translate sonic notes into static artwork optimized for print and streaming platforms.
+                </p>
+              </div>
             </div>
             
-            <div className="liquid-glass p-8 md:p-12 rounded-3xl border border-white/5">
-              <span className="font-serif italic text-5xl text-white/10 block mb-4">02</span>
-              <h3 className="font-kanit text-3xl font-black uppercase text-white mb-4 tracking-tight">
-                HUNGRY TALKS
-              </h3>
-              <p className="font-sans text-sm text-soft-cream-dim leading-relaxed mb-6 font-light">
-                Our audio-visual podcast studio hosting in-depth conversations with directors, singers, songwriters, and label executives. We preserve the stories, values, and blueprints that are building Punjabi culture today.
-              </p>
+            <div className="liquid-glass p-8 md:p-12 rounded-3xl border border-white/5 flex flex-col justify-between h-full hover:border-white/10 transition-all duration-300 group">
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <span className="font-serif italic text-5xl text-white/10 block leading-none">02</span>
+                  <div className="flex-shrink-0 p-2 bg-white/[0.03] border border-white/10 rounded-2xl backdrop-blur-md shadow-lg group-hover:border-white/20 transition-all duration-300">
+                    <img 
+                      src="/logo_talks.webp" 
+                      alt="Hungry Talks Logo" 
+                      width={64}
+                      height={64}
+                      loading="lazy"
+                      className="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+                <h3 className="font-kanit text-3xl font-black uppercase text-white mb-4 tracking-tight group-hover:text-warm-orange transition-colors duration-300">
+                  HUNGRY TALKS
+                </h3>
+                <p className="font-sans text-sm text-soft-cream-dim leading-relaxed font-light">
+                  Our audio-visual podcast studio hosting in-depth conversations with directors, singers, songwriters, and label executives. We preserve the stories, values, and blueprints that are building Punjabi culture today.
+                </p>
+              </div>
             </div>
           </div>
         </div>
