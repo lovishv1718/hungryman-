@@ -155,7 +155,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero 
-        title="HUNGRY PRODUCTIONS." 
+        title="HUNGRYMAN PRODUCTIONS." 
         subtitle="THE CREATIVE LAB" 
         description="A Punjab-based creative powerhouse. We believe visuals and conversations have the power to define cultural longevity."
       />
