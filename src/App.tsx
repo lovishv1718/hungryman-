@@ -475,7 +475,7 @@ export default function App() {
             </motion.div>
 
             {/* Movie Credits style directory links */}
-            <div className="w-full border-t border-white/5 pt-20 pb-12 grid grid-cols-1 md:grid-cols-3 gap-12 text-left md:text-center">
+            <div className="w-full border-t border-white/5 pt-20 pb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-left md:text-center">
               {/* Column 1: DIRECTORY */}
               <div className="flex flex-col md:items-center">
                 <h4 className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/30 mb-6 font-bold">DIRECTORY</h4>
@@ -504,19 +504,35 @@ export default function App() {
                 <h4 className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/30 mb-6 font-bold">NETWORKS</h4>
                 <ul className="flex flex-col gap-3 font-sans text-xs text-soft-cream-dim font-light">
                   <li>
-                    <a href="https://instagram.com/hungryman" target="_blank" rel="noreferrer" className="hover:text-warm-orange transition-colors">
+                    <a href="https://www.instagram.com/hungrymandesigns/" target="_blank" rel="noreferrer" className="hover:text-warm-orange transition-colors">
                       Instagram
                     </a>
                   </li>
                   <li>
-                    <a href="https://youtube.com/hungryman" target="_blank" rel="noreferrer" className="hover:text-warm-orange transition-colors">
+                    <a href="https://www.youtube.com/@hunggrytalks" target="_blank" rel="noreferrer" className="hover:text-warm-orange transition-colors">
                       YouTube
                     </a>
                   </li>
                 </ul>
               </div>
 
-              {/* Column 3: TECHNICAL SPECIFICATIONS */}
+              {/* Column 3: INQUIRIES */}
+              <div className="flex flex-col md:items-center">
+                <h4 className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/30 mb-6 font-bold">INQUIRIES</h4>
+                <div className="flex flex-col gap-1 items-start md:items-center">
+                  <span className="text-[10px] text-white/35 font-mono tracking-wider">CALL / WHATSAPP</span>
+                  <a 
+                    href="https://wa.me/919915984700" 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="hover:text-warm-orange transition-colors text-white font-kanit font-black text-base tracking-wider"
+                  >
+                    +91 99159 84700
+                  </a>
+                </div>
+              </div>
+
+              {/* Column 4: TECHNICAL SPECIFICATIONS */}
               <div className="flex flex-col md:items-center">
                 <h4 className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/30 mb-6 font-bold">SPECIFICATIONS</h4>
                 <div className="font-mono text-[10px] text-white/40 leading-relaxed font-light">
