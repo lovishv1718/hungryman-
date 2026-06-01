@@ -309,16 +309,17 @@ html.lenis, html.lenis body {
 
 .main-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3.2rem, 9.2vw, 8rem);
+  font-size: clamp(3.5rem, 8vw, 8rem);
   line-height: 0.9;
   letter-spacing: -2px;
   text-align: center;
   margin-bottom: 24px;
   text-transform: uppercase;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.35ch;
+  gap: 0.3ch;
 }
 
 .main-title .white-text {
@@ -491,7 +492,14 @@ html.lenis, html.lenis body {
                 url('/assets/col_production.webp') center/cover no-repeat;
   }
 
-
+  .main-title {
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.8rem;
+    gap: 0px;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
   .centerpiece-subtext {
     font-size: 0.65rem;
     margin-bottom: 30px;
