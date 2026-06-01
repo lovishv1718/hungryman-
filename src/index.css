@@ -307,28 +307,26 @@ html.lenis, html.lenis body {
   pointer-events: auto;
 }
 
-.title-container {
+.main-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.2rem, 9.2vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -2px;
+  text-align: center;
+  margin-bottom: 24px;
+  text-transform: uppercase;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35ch;
 }
 
-.title-we-create {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 8rem;
+.main-title .white-text {
   color: #F5F5F5;
-  line-height: 0.8;
-  letter-spacing: -2px;
 }
 
-.title-culture {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 8rem;
+.main-title .orange-text {
   color: #FF8A00;
-  line-height: 0.8;
-  letter-spacing: -2px;
-  margin-top: 4px;
 }
 
 .centerpiece-subtext {
@@ -473,12 +471,6 @@ html.lenis, html.lenis body {
   z-index: 40;
 }
 
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 1200px) {
-  .title-we-create, .title-culture {
-    font-size: 5.5rem;
-  }
-}
 
 @media (max-width: 900px) {
   /* Centerpiece as the full-height landing hero page */
@@ -499,11 +491,7 @@ html.lenis, html.lenis body {
                 url('/assets/col_production.webp') center/cover no-repeat;
   }
 
-  .title-we-create, .title-culture {
-    font-size: 3.8rem;
-    letter-spacing: -1px;
-  }
-  
+
   .centerpiece-subtext {
     font-size: 0.65rem;
     margin-bottom: 30px;

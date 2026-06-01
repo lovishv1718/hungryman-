@@ -265,16 +265,16 @@ export default function HomePage() {
         </div>
 
         <div className="centerpiece">
-          <div className="title-container">
-            <h1 className="title-we-create">WE CREATE</h1>
-            <div className="title-culture">CULTURE</div>
-          </div>
+          <h1 className="main-title">
+            <span className="white-text">WE CREATE</span>
+            <span className="orange-text">CULTURE</span>
+          </h1>
           <div className="centerpiece-subtext">
-            <span>POSTERS.</span>
+            <span>POSTER</span>
             <span className="subtext-dot">•</span>
-            <span>PODCASTS.</span>
+            <span>PODCAST</span>
             <span className="subtext-dot">•</span>
-            <span>PRODUCTION.</span>
+            <span>PRODUCTIONS</span>
           </div>
           
           <Link 
