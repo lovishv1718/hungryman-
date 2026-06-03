@@ -10,9 +10,9 @@ export default function TalksPage() {
   useEffect(() => {
     if (isPlaying && activeEpisode !== null) {
       const audioUrls = [
-        'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Episode 42 teaser
-        'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3', // Episode 41 teaser
-        'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'  // Episode 40 teaser
+        '/tari_baba.mp3',
+        '/baba_gurinder_singh.mp3',
+        '/elly_mangat.mp3'
       ];
       if (audioRef.current) {
         audioRef.current.pause();
@@ -84,17 +84,17 @@ export default function TalksPage() {
                 chapter: 'EPISODE 42'
               },
               {
-                guest: 'Roop Sharma',
-                title: 'Directors\' Vision: How Editing and Styling Crafts Culture',
-                duration: '38:40',
-                img: '/guest_roop_sharma.webp',
+                guest: 'Baba Gurinder Singh',
+                title: 'Baba Gurinder Singh Kheri Wala: World Cup Announcements & Dhadak Interview',
+                duration: '19:27',
+                img: '/baba_gurinder_singh.png',
                 chapter: 'EPISODE 41'
               },
               {
-                guest: 'Gurinder Gill',
-                title: 'Bridging the Gap: Underground Punjabi Music to Billboard Stars',
-                duration: '51:10',
-                img: '/guest_gurinder_gill.webp',
+                guest: 'Elly Mangat',
+                title: 'Tattiyan Gallan: Talking General Knowledge with Anmol Kwatra & Elly Mangat',
+                duration: '38:40',
+                img: '/elly_mangat.png',
                 chapter: 'EPISODE 40'
               }
             ].map((ep, idx) => {
@@ -167,7 +167,7 @@ export default function TalksPage() {
 
           <div className="w-full flex flex-col items-center justify-center pt-8 border-t border-white/5">
             <span className="font-mono text-[9px] tracking-[0.25em] text-white/30 uppercase mb-4">
-              {isPlaying ? `NOW STREAMING: ${activeEpisode !== null ? ['EPISODE 42 - TARI BABA', 'EPISODE 41 - ROOP SHARMA', 'EPISODE 40 - GURINDER GILL'][activeEpisode] : ''}` : 'SELECT EPISODE TO STREAM WAVEFORM'}
+              {isPlaying ? `NOW STREAMING: ${activeEpisode !== null ? ['EPISODE 42 - TARI BABA', 'EPISODE 41 - BABA GURINDER SINGH', 'EPISODE 40 - ELLY MANGAT'][activeEpisode] : ''}` : 'SELECT EPISODE TO STREAM WAVEFORM'}
             </span>
             <AudioWaveform active={isPlaying} />
           </div>
@@ -196,18 +196,18 @@ export default function TalksPage() {
                 img: "/tari_baba.png"
               },
               {
-                name: "ROOP SHARMA",
-                role: "Film Director & Editor",
-                bio: "Crafting the visuals behind Punjabi cinema, Roop is a creative force working at the intersection of pacing and narrative.",
-                handle: "@roopsharma",
-                img: "/guest_roop_sharma.webp"
+                name: "BABA GURINDER SINGH",
+                role: "Spiritual Leader & Visionary",
+                bio: "Baba Gurinder Singh Kheri Wala shares profound messages on global events, human connection, and spiritual growth in this exclusive conversation.",
+                handle: "@babagurinder",
+                img: "/baba_gurinder_singh.png"
               },
               {
-                name: "GURINDER GILL",
-                role: "Artist & Label Lead",
-                bio: "Moving from underground circles to international charts, Gurinder details the business and vision of modern music labels.",
-                handle: "@gurindergill",
-                img: "/guest_gurinder_gill.webp"
+                name: "ELLY MANGAT",
+                role: "Punjabi Pop Artist",
+                bio: "Known for his raw and unfiltered perspective, Elly Mangat joins the podcast to talk general knowledge, culture, and music industry experiences.",
+                handle: "@ellymangat",
+                img: "/elly_mangat.png"
               }
             ].map((guest, idx) => (
               <div key={idx} className="liquid-glass rounded-2xl p-6 border border-white/5 flex flex-col justify-between">
