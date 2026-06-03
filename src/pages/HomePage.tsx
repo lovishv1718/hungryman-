@@ -58,9 +58,9 @@ const accordionColumns: AccordionColumnItem[] = [
 
 function FeaturedWorkPreview() {
   const previewPosters = [
-    { src: '/poster 1.webp', artist: 'DILJIT DOSANJH', category: 'Official Tour Visuals', year: '2024', w: 872, h: 863 },
-    { src: '/poster 3.webp', artist: 'KARAN AUJLA', category: 'Album Cover & Visual Identity', year: '2023', w: 682, h: 824 },
-    { src: '/poster 5.webp', artist: 'AMRIT MAAN', category: 'Cinematic Campaign Poster', year: '2023', w: 866, h: 868 }
+    { src: '/poster 1.webp', artist: 'PARMISH VERMA', category: 'Official Tour Visuals', year: '2024', w: 872, h: 863 },
+    { src: '/karan_aujla.jpeg', artist: 'KARAN AUJLA', category: 'Album Cover & Visual Identity', year: '2023', w: 1080, h: 1350 },
+    { src: '/khan_bhaini2.jpeg', artist: 'KHAN BHAINI', category: 'Cinematic Campaign Poster', year: '2023', w: 1074, h: 1600 }
   ];
 
   return (

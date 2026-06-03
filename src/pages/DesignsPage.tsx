@@ -4,11 +4,11 @@ import PageHero from '../components/PageHero';
 import { TabbedBeforeAfterSlider } from '../components/BeforeAfterSlider';
 
 const allDesigns = [
-  { src: '/poster 1.webp', title: 'Diljit Dosanjh — Born to Shine', category: 'Official Tour Visuals', year: '2024', w: 872, h: 863 },
+  { src: '/poster 1.webp', title: 'Parmish Verma — Born to Shine', category: 'Official Tour Visuals', year: '2024', w: 872, h: 863 },
   { src: '/poster 2.webp', title: 'Diljit Dosanjh — Live in UK', category: 'Concert Creative', year: '2024', w: 695, h: 868 },
-  { src: '/poster 3.webp', title: 'Karan Aujla — Making Memories', category: 'Album Cover Art', year: '2023', w: 682, h: 824 },
+  { src: '/karan_aujla.jpeg', title: 'Karan Aujla — Making Memories', category: 'Album Cover Art', year: '2023', w: 1080, h: 1350 },
   { src: '/poster 4.webp', title: 'Karan Aujla — Street Art Promo', category: 'Artist Branding', year: '2023', w: 662, h: 870 },
-  { src: '/poster 5.webp', title: 'Amrit Maan — Babiha Campaign', category: 'Cinematic Poster', year: '2023', w: 866, h: 868 },
+  { src: '/khan_bhaini2.jpeg', title: 'Khan Bhaini — Babiha Campaign', category: 'Cinematic Poster', year: '2023', w: 1074, h: 1600 },
   { src: '/poster 6.webp', title: 'Amrit Maan — Babiha Alt Cover', category: 'Release Creative', year: '2023', w: 871, h: 865 },
   { src: '/poster 7.webp', title: 'Prabh Gill — Editorial Art', category: 'Single Artwork', year: '2024', w: 700, h: 868 },
   { src: '/poster 8.webp', title: 'Prabh Gill — Visual Identity', category: 'Motion Poster Graphic', year: '2024', w: 865, h: 872 }

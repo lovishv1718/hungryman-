@@ -40,9 +40,9 @@ interface FeaturedPoster {
 }
 
 const featuredPosters: FeaturedPoster[] = [
-  { src: '/poster 1.webp', title: 'Diljit Dosanjh — Born to Shine', category: 'Official Tour Visuals', artist: 'DILJIT DOSANJH', year: '2024', w: 872, h: 863 },
-  { src: '/poster 3.webp', title: 'Karan Aujla — Making Memories', category: 'Album Cover & Visual Identity', artist: 'KARAN AUJLA', year: '2023', w: 682, h: 824 },
-  { src: '/poster 5.webp', title: 'Amrit Maan — Babiha', category: 'Cinematic Campaign Poster', artist: 'AMRIT MAAN', year: '2023', w: 866, h: 868 },
+  { src: '/poster 1.webp', title: 'Parmish Verma — Born to Shine', category: 'Official Tour Visuals', artist: 'PARMISH VERMA', year: '2024', w: 872, h: 863 },
+  { src: '/karan_aujla.jpeg', title: 'Karan Aujla — Making Memories', category: 'Album Cover & Visual Identity', artist: 'KARAN AUJLA', year: '2023', w: 1080, h: 1350 },
+  { src: '/khan_bhaini2.jpeg', title: 'Khan Bhaini — Babiha', category: 'Cinematic Campaign Poster', artist: 'KHAN BHAINI', year: '2023', w: 1074, h: 1600 },
   { src: '/poster 7.webp', title: 'Prabh Gill — Editorial Art', category: 'Single Artwork', artist: 'PRABH GILL', year: '2024', w: 700, h: 868 },
 ];
 
@@ -194,11 +194,11 @@ interface HallOfFameItem {
 }
 
 const hallOfFameItems: HallOfFameItem[] = [
-  { artist: 'Diljit Dosanjh', project: 'Born to Shine Tour', type: 'Poster Project', year: '2024', img: '/poster 1.webp', badge: 'CAMPAIGN', w: 872, h: 863 },
+  { artist: 'Parmish Verma', project: 'Born to Shine Tour', type: 'Poster Project', year: '2024', img: '/poster 1.webp', badge: 'CAMPAIGN', w: 872, h: 863 },
   { artist: 'Jass Manak', project: 'Exclusive Album Interview', type: 'Podcast Guest', year: '2024', img: '/guest_jass_manak.webp', badge: 'INTERVIEW', w: 1024, h: 1024 },
-  { artist: 'Karan Aujla', project: 'Making Memories Album Cover', type: 'Creative Collaboration', year: '2023', img: '/poster 3.webp', badge: 'COVER_ART', w: 682, h: 824 },
+  { artist: 'Karan Aujla', project: 'Making Memories Album Cover', type: 'Creative Collaboration', year: '2023', img: '/karan_aujla.jpeg', badge: 'COVER_ART', w: 1080, h: 1350 },
   { artist: 'Roop Sharma', project: 'Cinematic Visuals & Grading', type: 'Podcast Guest', year: '2023', img: '/guest_roop_sharma.webp', badge: 'PRODUCTION', w: 1024, h: 1024 },
-  { artist: 'Amrit Maan', project: 'Babiha Single Campaign', type: 'Poster Project', year: '2023', img: '/poster 5.webp', badge: 'CAMPAIGN', w: 866, h: 868 },
+  { artist: 'Khan Bhaini', project: 'Babiha Single Campaign', type: 'Poster Project', year: '2023', img: '/khan_bhaini2.jpeg', badge: 'CAMPAIGN', w: 1074, h: 1600 },
   { artist: 'Gurinder Gill', project: 'Billboard Charts Stardom Special', type: 'Podcast Guest', year: '2024', img: '/guest_gurinder_gill.webp', badge: 'INTERVIEW', w: 1024, h: 1024 }
 ];
 

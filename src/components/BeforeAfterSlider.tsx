@@ -133,7 +133,7 @@ export function BeforeAfterSlider({
 
 export function TabbedBeforeAfterSlider() {
   const transformationProjects = [
-    { id: 'diljit', label: 'DILJIT TOUR POSTER', before: '/image 1.webp', after: '/poster 1.webp', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 490, h: 744 },
+    { id: 'diljit', label: 'PARMISH VERMA TOUR POSTER', before: '/image 1.webp', after: '/poster 1.webp', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 490, h: 744 },
     { id: 'aujla', label: 'KARAN AUJLA ALBUM', before: '/image 3.webp', after: '/poster 3.webp', beforeLabel: 'Concept Composite', afterLabel: 'Album Cover Art', w: 488, h: 730 },
     { id: 'studio', label: 'STUDIO COLOR GRADING', before: '/image 4.webp', after: '/image 5.webp', beforeLabel: 'Log Profile Camera Raw', afterLabel: 'Final Graded Visual Lab', w: 1301, h: 1209 }
   ];
