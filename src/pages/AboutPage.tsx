@@ -179,7 +179,12 @@ export default function AboutPage() {
       <section className="py-32 bg-black/20 backdrop-blur-sm relative border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div className="liquid-glass p-8 md:p-12 rounded-3xl border border-white/5 flex flex-col justify-between h-full hover:border-white/10 transition-all duration-300 group">
+            <a 
+              href="https://www.instagram.com/hungrymandesigns" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="liquid-glass p-8 md:p-12 rounded-3xl border border-white/5 flex flex-col justify-between h-full hover:border-white/10 transition-all duration-300 group cursor-pointer no-underline"
+            >
               <div>
                 <div className="flex justify-between items-start mb-6">
                   <span className="font-serif italic text-5xl text-white/10 block leading-none">01</span>
@@ -201,9 +206,14 @@ export default function AboutPage() {
                   Our graphics lab focused entirely on official music posters, album covers, and artist visual identity. We work directly with artists to translate sonic notes into static artwork optimized for print and streaming platforms.
                 </p>
               </div>
-            </div>
+            </a>
             
-            <div className="liquid-glass p-8 md:p-12 rounded-3xl border border-white/5 flex flex-col justify-between h-full hover:border-white/10 transition-all duration-300 group">
+            <a 
+              href="https://www.youtube.com/@hunggrytalks" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="liquid-glass p-8 md:p-12 rounded-3xl border border-white/5 flex flex-col justify-between h-full hover:border-white/10 transition-all duration-300 group cursor-pointer no-underline"
+            >
               <div>
                 <div className="flex justify-between items-start mb-6">
                   <span className="font-serif italic text-5xl text-white/10 block leading-none">02</span>
@@ -225,7 +235,7 @@ export default function AboutPage() {
                   Our audio-visual podcast studio hosting in-depth conversations with directors, singers, songwriters, and label executives. We preserve the stories, values, and blueprints that are building Punjabi culture today.
                 </p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
