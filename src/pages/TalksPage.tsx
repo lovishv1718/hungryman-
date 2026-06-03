@@ -212,14 +212,14 @@ export default function TalksPage() {
             ].map((guest, idx) => (
               <div key={idx} className="liquid-glass rounded-2xl p-6 border border-white/5 flex flex-col justify-between">
                 <div>
-                  <div className="relative aspect-square w-full rounded-xl overflow-hidden mb-6 bg-black">
+                  <div className="relative aspect-[4/5] w-full rounded-xl overflow-hidden mb-6 bg-[#070708]/80 border border-white/5 flex items-center justify-center">
                     <img 
                       src={guest.img} 
                       alt={guest.name} 
                       width={1024}
                       height={1024}
                       loading="lazy"
-                      className="w-full h-full object-cover filter brightness-[0.8] contrast-[1.05]" 
+                      className="w-full h-full object-contain filter brightness-[0.9] contrast-[1.05]" 
                     />
                   </div>
                   <span className="font-mono text-[9px] uppercase tracking-widest text-warm-orange block mb-1">
