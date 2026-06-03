@@ -165,34 +165,26 @@ export function CarouselBeforeAfterSlider() {
 
   const getX = (offset: number) => {
     if (isMobile) {
-      if (offset === 0) return "0%";
-      if (offset === -1) return "-78%";
-      if (offset === 1) return "78%";
-      if (offset === -2) return "-150%";
-      return "150%";
+      return `${offset * 86}%`;
     } else {
-      if (offset === 0) return "0%";
-      if (offset === -1) return "-60%";
-      if (offset === 1) return "60%";
-      if (offset === -2) return "-120%";
-      return "120%";
+      return `${offset * 90}%`;
     }
   };
 
   const getScale = (offset: number) => {
     if (offset === 0) return 1.0;
-    return isMobile ? 0.75 : 0.82;
+    return isMobile ? 0.78 : 0.82;
   };
 
   const getOpacity = (offset: number) => {
     if (offset === 0) return 1.0;
-    return isMobile ? 0.15 : 0.45;
+    return isMobile ? 0.2 : 0.45;
   };
 
   return (
     <div className="relative w-full flex flex-col items-center select-none overflow-hidden py-6">
       {/* 3D Carousel Stage */}
-      <div className="relative w-full max-w-6xl h-[280px] sm:h-[350px] md:h-[450px] lg:h-[500px] flex items-center justify-center overflow-visible">
+      <div className="relative w-full max-w-6xl h-[330px] sm:h-[400px] md:h-[480px] lg:h-[530px] flex items-center justify-center overflow-visible">
         {carouselProjects.map((proj, idx) => {
           let offset = idx - activeIndex;
 
@@ -208,8 +200,7 @@ export function CarouselBeforeAfterSlider() {
               key={proj.id}
               style={{
                 position: 'absolute',
-                width: isMobile ? '82%' : '65%',
-                maxWidth: '700px',
+                width: isMobile ? '230px' : '370px',
                 zIndex,
               }}
               animate={{
@@ -222,7 +213,7 @@ export function CarouselBeforeAfterSlider() {
                 stiffness: 260,
                 damping: 26,
               }}
-              className={`aspect-[16/10] rounded-2xl overflow-hidden cursor-pointer transition-all duration-[600ms] ${
+              className={`aspect-[4/5] rounded-2xl overflow-hidden cursor-pointer transition-all duration-[600ms] ${
                 isActive 
                   ? 'glowing-card-active' 
                   : 'border border-white/5 shadow-2xl brightness-50 hover:brightness-75'
