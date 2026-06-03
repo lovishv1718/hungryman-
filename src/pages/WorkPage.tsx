@@ -3,7 +3,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { ChevronRight } from 'lucide-react';
 import HlsVideoBackground from '../components/HlsVideoBackground';
 import PageHero from '../components/PageHero';
-import { TabbedBeforeAfterSlider } from '../components/BeforeAfterSlider';
+import { CarouselBeforeAfterSlider } from '../components/BeforeAfterSlider';
 import CountingStat from '../components/CountingStat';
 
 const getOpacityRange = (index: number, length: number, fadeTime = 0.05) => {
@@ -230,7 +230,7 @@ export default function WorkPage() {
             </p>
           </div>
 
-          <TabbedBeforeAfterSlider />
+          <CarouselBeforeAfterSlider />
         </div>
       </section>
 

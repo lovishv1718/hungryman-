@@ -1,6 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
-import { Monitor } from 'lucide-react';
+import { Monitor, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface BeforeAfterSliderProps {
   beforeSrc: string;
@@ -9,6 +10,7 @@ interface BeforeAfterSliderProps {
   afterLabel?: string;
   widthVal?: number;
   heightVal?: number;
+  className?: string;
 }
 
 export function BeforeAfterSlider({ 
@@ -17,7 +19,8 @@ export function BeforeAfterSlider({
   beforeLabel = "Raw Studio Capture", 
   afterLabel = "Final Graded Poster",
   widthVal = 1200,
-  heightVal = 800
+  heightVal = 800,
+  className = "h-[400px] md:h-[600px]"
 }: BeforeAfterSliderProps) {
   const sliderContainerRef = useRef<HTMLDivElement>(null);
   const [sliderPos, setSliderPos] = useState(50);
@@ -81,7 +84,7 @@ export function BeforeAfterSlider({
       onTouchMove={handleTouchMove}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      className="relative w-full h-[400px] md:h-[600px] overflow-hidden rounded-2xl border border-white/10 shadow-2xl cursor-ew-resize select-none"
+      className={`relative w-full overflow-hidden rounded-2xl border border-white/10 shadow-2xl cursor-ew-resize select-none ${className}`}
     >
       {/* BEFORE LAYER (Raw Photography) */}
       <div className="absolute inset-0 w-full h-full bg-[#0a0a0a]">
@@ -131,41 +134,154 @@ export function BeforeAfterSlider({
   );
 }
 
-export function TabbedBeforeAfterSlider() {
-  const transformationProjects = [
-    { id: 'diljit', label: 'PARMISH VERMA TOUR POSTER', before: '/image 1.webp', after: '/poster 1.webp', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 490, h: 744 },
-    { id: 'aujla', label: 'KARAN AUJLA ALBUM', before: '/image 3.webp', after: '/poster 3.webp', beforeLabel: 'Concept Composite', afterLabel: 'Album Cover Art', w: 488, h: 730 },
-    { id: 'studio', label: 'STUDIO COLOR GRADING', before: '/image 4.webp', after: '/image 5.webp', beforeLabel: 'Log Profile Camera Raw', afterLabel: 'Final Graded Visual Lab', w: 1301, h: 1209 }
+export function CarouselBeforeAfterSlider() {
+  const carouselProjects = [
+    { id: 'inder', label: 'INDER CHAHAL', before: '/inder_chahal_before.png', after: '/inderchahal_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
+    { id: 'lucky', label: 'LUCKY VERMA', before: '/luckyverma_before.png', after: '/lucky_verma_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
+    { id: 'babbumaan', label: 'BABBU MAAN', before: '/babbumaan_before.png', after: '/babbumaan_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
+    { id: 'gulab', label: 'GULAB SIDHU', before: '/gulab_sidhu_before.png', after: '/gulab_sidhu_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
+    { id: 'amrinder', label: 'AMRINDER GILL', before: '/amrindergill_before.png', after: '/amrinder_gill_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 768, h: 960 }
   ];
-  const [activeTab, setActiveTab] = useState('diljit');
-  const currentProj = transformationProjects.find(p => p.id === activeTab) || transformationProjects[0];
+
+  const [activeIndex, setActiveIndex] = useState(2); // Card 3 (index 2) starts centered!
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + carouselProjects.length) % carouselProjects.length);
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % carouselProjects.length);
+  };
+
+  const getX = (offset: number) => {
+    if (isMobile) {
+      if (offset === 0) return "0%";
+      if (offset === -1) return "-78%";
+      if (offset === 1) return "78%";
+      if (offset === -2) return "-150%";
+      return "150%";
+    } else {
+      if (offset === 0) return "0%";
+      if (offset === -1) return "-60%";
+      if (offset === 1) return "60%";
+      if (offset === -2) return "-120%";
+      return "120%";
+    }
+  };
+
+  const getScale = (offset: number) => {
+    if (offset === 0) return 1.0;
+    return isMobile ? 0.75 : 0.82;
+  };
+
+  const getOpacity = (offset: number) => {
+    if (offset === 0) return 1.0;
+    return isMobile ? 0.15 : 0.45;
+  };
 
   return (
-    <div className="flex flex-col items-center w-full">
-      <div className="flex flex-wrap gap-2 justify-center mb-8 border border-white/10 rounded-full p-1 bg-black/40 backdrop-blur-md">
-        {transformationProjects.map(proj => (
-          <button
-            key={proj.id}
-            onClick={() => setActiveTab(proj.id)}
-            className={`px-6 py-2.5 rounded-full text-[10px] font-mono tracking-widest uppercase transition-all duration-300 cursor-pointer ${
-              activeTab === proj.id 
-                ? 'bg-warm-orange text-white' 
-                : 'text-white/60 hover:text-white hover:bg-white/5'
-            }`}
-          >
-            {proj.label}
-          </button>
-        ))}
+    <div className="relative w-full flex flex-col items-center select-none overflow-hidden py-6">
+      {/* 3D Carousel Stage */}
+      <div className="relative w-full max-w-6xl h-[280px] sm:h-[350px] md:h-[450px] lg:h-[500px] flex items-center justify-center overflow-visible">
+        {carouselProjects.map((proj, idx) => {
+          let offset = idx - activeIndex;
+
+          // Circular index math to wrap correctly
+          if (offset < -2) offset += carouselProjects.length;
+          if (offset > 2) offset -= carouselProjects.length;
+
+          const isActive = idx === activeIndex;
+          const zIndex = 20 - Math.abs(offset);
+
+          return (
+            <motion.div
+              key={proj.id}
+              style={{
+                position: 'absolute',
+                width: isMobile ? '82%' : '65%',
+                maxWidth: '700px',
+                zIndex,
+              }}
+              animate={{
+                x: getX(offset),
+                scale: getScale(offset),
+                opacity: getOpacity(offset),
+              }}
+              transition={{
+                type: 'spring',
+                stiffness: 260,
+                damping: 26,
+              }}
+              className={`aspect-[16/10] rounded-2xl overflow-hidden cursor-pointer transition-all duration-[600ms] ${
+                isActive 
+                  ? 'glowing-card-active' 
+                  : 'border border-white/5 shadow-2xl brightness-50 hover:brightness-75'
+              }`}
+              onClick={() => {
+                if (!isActive) setActiveIndex(idx);
+              }}
+            >
+              {isActive ? (
+                <BeforeAfterSlider 
+                  beforeSrc={proj.before}
+                  afterSrc={proj.after}
+                  beforeLabel={proj.beforeLabel}
+                  afterLabel={proj.afterLabel}
+                  widthVal={proj.w}
+                  heightVal={proj.h}
+                  className="w-full h-full"
+                />
+              ) : (
+                <div className="relative w-full h-full bg-[#070708]">
+                  <img 
+                    src={proj.after} 
+                    alt={proj.label}
+                    className="w-full h-full object-cover pointer-events-none"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                  <div className="absolute bottom-6 left-6 text-xs font-kanit font-black text-white/50 uppercase tracking-widest">
+                    {proj.label}
+                  </div>
+                </div>
+              )}
+            </motion.div>
+          );
+        })}
       </div>
-      <BeforeAfterSlider 
-        key={activeTab} 
-        beforeSrc={currentProj.before} 
-        afterSrc={currentProj.after} 
-        beforeLabel={currentProj.beforeLabel} 
-        afterLabel={currentProj.afterLabel} 
-        widthVal={currentProj.w}
-        heightVal={currentProj.h}
-      />
+
+      {/* Navigation Controls */}
+      <div className="flex items-center gap-6 mt-10 md:mt-14 z-30">
+        <button
+          onClick={handlePrev}
+          className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-black/70 hover:bg-warm-orange hover:border-warm-orange text-white transition-all duration-300 hover:scale-105 cursor-pointer shadow-lg active:scale-95"
+          aria-label="Previous Project"
+        >
+          <ChevronLeft size={20} />
+        </button>
+
+        <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/50 select-none min-w-[240px] text-center">
+          {activeIndex + 1} / {carouselProjects.length} — <span className="text-white font-bold">{carouselProjects[activeIndex].label}</span>
+        </span>
+
+        <button
+          onClick={handleNext}
+          className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-black/70 hover:bg-warm-orange hover:border-warm-orange text-white transition-all duration-300 hover:scale-105 cursor-pointer shadow-lg active:scale-95"
+          aria-label="Next Project"
+        >
+          <ChevronRight size={20} />
+        </button>
+      </div>
     </div>
   );
 }
+

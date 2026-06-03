@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Layers, Camera } from 'lucide-react';
 import PageHero from '../components/PageHero';
-import { TabbedBeforeAfterSlider } from '../components/BeforeAfterSlider';
+import { CarouselBeforeAfterSlider } from '../components/BeforeAfterSlider';
 
 const allDesigns = [
   { src: '/poster 1.webp', title: 'Parmish Verma — Born to Shine', category: 'Official Tour Visuals', year: '2024', w: 872, h: 863 },
@@ -157,7 +157,7 @@ export default function DesignsPage() {
             </p>
           </div>
 
-          <TabbedBeforeAfterSlider />
+          <CarouselBeforeAfterSlider />
         </div>
       </section>
 
