@@ -182,25 +182,6 @@ function FeaturedWorkSection() {
   );
 }
 
-interface HallOfFameItem {
-  artist: string;
-  project: string;
-  type: string;
-  year: string;
-  img: string;
-  badge: string;
-  w: number;
-  h: number;
-}
-
-const hallOfFameItems: HallOfFameItem[] = [
-  { artist: 'Parmish Verma', project: 'Born to Shine Tour', type: 'Poster Project', year: '2024', img: '/poster 1.webp', badge: 'CAMPAIGN', w: 872, h: 863 },
-  { artist: 'Tari Baba', project: 'Cultural Heritage Spotlight', type: 'Podcast Guest', year: '2024', img: '/tari_baba.png', badge: 'INTERVIEW', w: 436, h: 236 },
-  { artist: 'Karan Aujla', project: 'Making Memories Album Cover', type: 'Creative Collaboration', year: '2023', img: '/karan_aujla.jpeg', badge: 'COVER_ART', w: 1080, h: 1350 },
-  { artist: 'Roop Sharma', project: 'Cinematic Visuals & Grading', type: 'Podcast Guest', year: '2023', img: '/guest_roop_sharma.webp', badge: 'PRODUCTION', w: 1024, h: 1024 },
-  { artist: 'Khan Bhaini', project: 'Babiha Single Campaign', type: 'Poster Project', year: '2023', img: '/khan_bhaini2.jpeg', badge: 'CAMPAIGN', w: 1074, h: 1600 },
-  { artist: 'Gurinder Gill', project: 'Billboard Charts Stardom Special', type: 'Podcast Guest', year: '2024', img: '/guest_gurinder_gill.webp', badge: 'INTERVIEW', w: 1024, h: 1024 }
-];
 
 export default function WorkPage() {
   return (
@@ -329,73 +310,6 @@ export default function WorkPage() {
         </div>
       </section>
 
-      {/* Trust & Collaboration (Hall of Fame) */}
-      <section id="trust" className="py-32 bg-transparent relative border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col mb-24 max-w-3xl">
-            <span className="font-sans text-xs uppercase tracking-[0.35em] text-warm-orange font-semibold mb-4 block text-left">
-              PARTNERSHIPS
-            </span>
-            <h2 className="font-kanit text-5xl md:text-7xl font-black uppercase text-white tracking-tighter leading-none text-left">
-              BUILT WITH<br />ARTISTS.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
-            {hallOfFameItems.map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className="group relative aspect-[3/4] rounded-xl overflow-hidden border border-white/5 bg-zinc-950 shadow-2xl cursor-pointer"
-              >
-                <img 
-                  src={item.img} 
-                  alt={item.artist} 
-                  width={item.w}
-                  height={item.h}
-                  loading="lazy"
-                  className="w-full h-full object-cover filter brightness-[0.75] contrast-[1.05] group-hover:scale-105 group-hover:brightness-95 transition-all duration-[1000ms] ease-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/25 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none" />
-                
-                <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-warm-orange mb-2 block opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                    {item.type}
-                  </span>
-                  <h4 className="font-kanit text-xl font-black text-white uppercase tracking-wider mb-1 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                    {item.artist}
-                  </h4>
-                  <p className="font-sans text-[10px] text-white/50 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-                    {item.project} // {item.year}
-                  </p>
-                </div>
-                
-                <div className="absolute top-4 right-4 z-20 border border-white/10 px-2 py-0.5 rounded text-[8px] font-mono tracking-widest text-white/40 bg-black/40 backdrop-blur-md uppercase">
-                  {item.badge}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2 }}
-            className="w-full text-center max-w-4xl mx-auto border-t border-white/5 pt-20"
-          >
-            <blockquote className="font-serif italic text-4xl md:text-6xl text-white/95 leading-tight mb-8">
-              "Hungry Productions helped bring our vision to life."
-            </blockquote>
-            <cite className="font-mono text-xs uppercase tracking-[0.2em] text-warm-orange font-bold not-italic">
-              — TARI BABA / PODCAST GUEST
-            </cite>
-          </motion.div>
-        </div>
-      </section>
     </>
   );
 }
