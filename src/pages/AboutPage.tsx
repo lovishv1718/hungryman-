@@ -34,11 +34,11 @@ interface StudioChapter {
 }
 
 const studioChapters: StudioChapter[] = [
-  { src: '/image 2.webp', chapter: '01', title: 'The Collaboration', desc: 'Backstage discussions aligning creative direction directly with artists to translate sonic notes into visual definitions.', w: 490, h: 731 },
-  { src: '/image 4.webp', chapter: '02', title: 'The Capture', desc: 'Outdoors production moments capturing raw photography, atmospheric lighting elements, and BTS frames.', w: 1301, h: 1209 },
-  { src: '/image 5.webp', chapter: '03', title: 'The Digital Work', desc: 'Manipulation and layout composition at the digital workstation, mapping out graphic variables.', w: 1177, h: 1337 },
-  { src: '/image 1.webp', chapter: '04', title: 'The Edit Closeup', desc: 'Precision color grading and detailed visual balancing to craft high-impact textures and gradients.', w: 490, h: 744 },
-  { src: '/image 3.webp', chapter: '05', title: 'The Review Room', desc: 'Team review environments comparing compositions on reference monitors to certify output impact.', w: 488, h: 730 },
+  { src: '/image 2_cropped.webp', chapter: '01', title: 'The Collaboration', desc: 'Backstage discussions aligning creative direction directly with artists to translate sonic notes into visual definitions.', w: 490, h: 367 },
+  { src: '/image 4_cropped.webp', chapter: '02', title: 'The Capture', desc: 'Outdoors production moments capturing raw photography, atmospheric lighting elements, and BTS frames.', w: 1301, h: 975 },
+  { src: '/image 5_cropped.webp', chapter: '03', title: 'The Digital Work', desc: 'Manipulation and layout composition at the digital workstation, mapping out graphic variables.', w: 1177, h: 882 },
+  { src: '/image 1_cropped.webp', chapter: '04', title: 'The Edit Closeup', desc: 'Precision color grading and detailed visual balancing to craft high-impact textures and gradients.', w: 490, h: 367 },
+  { src: '/image 3_cropped.webp', chapter: '05', title: 'The Review Room', desc: 'Team review environments comparing compositions on reference monitors to certify output impact.', w: 488, h: 366 },
 ];
 
 function StudioChaptersSection() {
@@ -91,7 +91,7 @@ function StudioChaptersSection() {
                       width={chapter.w}
                       height={chapter.h}
                       loading="lazy"
-                      className="w-full h-full object-contain filter brightness-[0.85] contrast-[1.05]"
+                      className="w-full h-full object-cover filter brightness-[0.85] contrast-[1.05]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                   </div>
