@@ -532,21 +532,19 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Column 4: TECHNICAL SPECIFICATIONS */}
+              {/* Column 4: LOCATION */}
               <div className="flex flex-col md:items-center">
-                <h4 className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/30 mb-6 font-bold">SPECIFICATIONS</h4>
+                <h4 className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/30 mb-6 font-bold">LOCATION</h4>
                 <div className="font-mono text-[10px] text-white/40 leading-relaxed font-light">
-                  <span>FPS: 23.976 // REC MODE</span><br />
-                  <span>GAMMA: S-LOG3 // WB: 4300K</span><br />
-                  <span>LOC: MOHALI, PUNJAB, INDIA</span>
+                  <span>MOHALI, LUDHIANA (PUNJAB)</span>
                 </div>
               </div>
             </div>
 
             {/* Copyright / Footer credits info */}
             <div className="w-full border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[9px] font-mono tracking-[0.25em] text-white/30 w-full mt-4">
-              <span>© {new Date().getFullYear()} HUNGRYMAN PRODUCTIONS. ALL RIGHTS RESERVED.</span>
-              <span>MADE IN PUNJAB</span>
+              <span>© 2020 HUNGRYMAN PRODUCTIONS. ALL RIGHTS RESERVED.</span>
+              <span>DESIGN BY RAREDIGITAL</span>
             </div>
 
           </div>
