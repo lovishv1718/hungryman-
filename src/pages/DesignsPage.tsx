@@ -120,18 +120,6 @@ export default function DesignsPage() {
                   loading="lazy"
                   className="w-full h-full object-cover filter brightness-[0.8] contrast-[1.05] group-hover:scale-105 transition-transform duration-[1200ms] ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
-                <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end">
-                  <span className="font-mono text-[9px] uppercase tracking-widest text-warm-orange mb-1 block">
-                    {design.category}
-                  </span>
-                  <h3 className="font-kanit text-lg font-black text-white uppercase tracking-wider mb-1 leading-tight">
-                    {design.title}
-                  </h3>
-                  <span className="font-sans text-[9px] text-white/40 uppercase tracking-widest">
-                    Released: {design.year}
-                  </span>
-                </div>
                 <div className="absolute top-4 right-4 z-20 border border-white/10 px-2 py-0.5 rounded text-[8px] font-mono tracking-widest text-white/40 bg-black/40 backdrop-blur-md uppercase">
                   RAW_ASSET
                 </div>
