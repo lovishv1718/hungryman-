@@ -69,9 +69,6 @@ function StudioChaptersSection() {
           {/* Big Visual Left (Fades inside the loop) */}
           <div className="md:col-span-8 flex justify-center relative w-full h-[50vh] md:h-[70vh]">
             {studioChapters.map((chapter, index) => {
-              const start = index / studioChapters.length;
-              const end = (index + 1) / studioChapters.length;
-
               const opacityRange = getOpacityRange(index, studioChapters.length, 0.04);
               const opacity = useTransform(
                 scrollYProgress, 
@@ -79,12 +76,6 @@ function StudioChaptersSection() {
                 opacityRange.output
               );
               
-              const scale = useTransform(
-                scrollYProgress,
-                [start, end],
-                [1.0, 1.06]
-              );
-
               return (
                 <motion.div 
                   key={index}
@@ -93,17 +84,16 @@ function StudioChaptersSection() {
                     activeIndex === index ? "pointer-events-auto" : "pointer-events-none"
                   }`}
                 >
-                  <div className="relative w-full aspect-[4/3] h-[50vh] md:h-[70vh] overflow-hidden rounded-xl border border-white/5 shadow-2xl bg-black">
+                  <div className="relative w-full aspect-[4/3] h-[50vh] md:h-[70vh] overflow-hidden rounded-xl border border-white/5 shadow-2xl bg-black flex items-center justify-center">
                     <motion.img 
-                      style={{ scale }}
                       src={chapter.src} 
                       alt={chapter.title} 
                       width={chapter.w}
                       height={chapter.h}
                       loading="lazy"
-                      className="w-full h-full object-cover filter brightness-[0.7] contrast-[1.05]"
+                      className="w-full h-full object-contain filter brightness-[0.85] contrast-[1.05]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                   </div>
                 </motion.div>
               );
