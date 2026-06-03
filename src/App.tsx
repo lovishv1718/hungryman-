@@ -201,6 +201,19 @@ function ProjectPlannerModal({ isOpen, onClose }: ProjectPlannerModalProps) {
                 <form 
                   onSubmit={(e) => {
                     e.preventDefault();
+                    
+                    const message = `*New Project Brief - Hungryman Productions* 🚀\n\n` +
+                      `👤 *Name:* ${contactName}\n` +
+                      `📧 *Email:* ${contactEmail}\n` +
+                      `📞 *Phone:* ${contactPhone}\n` +
+                      `🏢 *Role:* ${clientRole}\n` +
+                      `🛠️ *Services:* ${serviceNeeds.join(', ')}\n` +
+                      `💰 *Project Scale:* ${budget}`;
+                    
+                    const encodedMessage = encodeURIComponent(message);
+                    const whatsappUrl = `https://wa.me/919915984700?text=${encodedMessage}`;
+                    
+                    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
                     setStep(5);
                   }}
                   className="flex flex-col gap-4 mb-8"
