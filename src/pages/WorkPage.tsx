@@ -195,7 +195,7 @@ interface HallOfFameItem {
 
 const hallOfFameItems: HallOfFameItem[] = [
   { artist: 'Parmish Verma', project: 'Born to Shine Tour', type: 'Poster Project', year: '2024', img: '/poster 1.webp', badge: 'CAMPAIGN', w: 872, h: 863 },
-  { artist: 'Jass Manak', project: 'Exclusive Album Interview', type: 'Podcast Guest', year: '2024', img: '/guest_jass_manak.webp', badge: 'INTERVIEW', w: 1024, h: 1024 },
+  { artist: 'Tari Baba', project: 'Cultural Heritage Spotlight', type: 'Podcast Guest', year: '2024', img: '/tari_baba.png', badge: 'INTERVIEW', w: 436, h: 236 },
   { artist: 'Karan Aujla', project: 'Making Memories Album Cover', type: 'Creative Collaboration', year: '2023', img: '/karan_aujla.jpeg', badge: 'COVER_ART', w: 1080, h: 1350 },
   { artist: 'Roop Sharma', project: 'Cinematic Visuals & Grading', type: 'Podcast Guest', year: '2023', img: '/guest_roop_sharma.webp', badge: 'PRODUCTION', w: 1024, h: 1024 },
   { artist: 'Khan Bhaini', project: 'Babiha Single Campaign', type: 'Poster Project', year: '2023', img: '/khan_bhaini2.jpeg', badge: 'CAMPAIGN', w: 1074, h: 1600 },
@@ -391,7 +391,7 @@ export default function WorkPage() {
               "Hungry Productions helped bring our vision to life."
             </blockquote>
             <cite className="font-mono text-xs uppercase tracking-[0.2em] text-warm-orange font-bold not-italic">
-              — JASS MANAK / ARTIST & COLLABORATOR
+              — TARI BABA / PODCAST GUEST
             </cite>
           </motion.div>
         </div>

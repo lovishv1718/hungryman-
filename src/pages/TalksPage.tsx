@@ -77,10 +77,10 @@ export default function TalksPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-20">
             {[
               {
-                guest: 'Jass Manak',
-                title: 'The New Wave of Punjabi Sound & Global Streaming Hits',
+                guest: 'Tari Baba',
+                title: 'Preserving Cultural Heritage & Navigating the Modern Soundscape',
                 duration: '42:15',
-                img: '/guest_jass_manak.webp',
+                img: '/tari_baba.png',
                 chapter: 'EPISODE 42'
               },
               {
@@ -167,7 +167,7 @@ export default function TalksPage() {
 
           <div className="w-full flex flex-col items-center justify-center pt-8 border-t border-white/5">
             <span className="font-mono text-[9px] tracking-[0.25em] text-white/30 uppercase mb-4">
-              {isPlaying ? `NOW STREAMING: ${activeEpisode !== null ? ['EPISODE 42 - JASS MANAK', 'EPISODE 41 - ROOP SHARMA', 'EPISODE 40 - GURINDER GILL'][activeEpisode] : ''}` : 'SELECT EPISODE TO STREAM WAVEFORM'}
+              {isPlaying ? `NOW STREAMING: ${activeEpisode !== null ? ['EPISODE 42 - TARI BABA', 'EPISODE 41 - ROOP SHARMA', 'EPISODE 40 - GURINDER GILL'][activeEpisode] : ''}` : 'SELECT EPISODE TO STREAM WAVEFORM'}
             </span>
             <AudioWaveform active={isPlaying} />
           </div>
@@ -189,11 +189,11 @@ export default function TalksPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "JASS MANAK",
-                role: "Singer & Songwriter",
-                bio: "With billions of streams across platforms, Jass represents the global scaling of modern Punjabi pop and melodic structure.",
-                handle: "@jassmanak",
-                img: "/guest_jass_manak.webp"
+                name: "TARI BABA",
+                role: "Cultural Visionary & Singer",
+                bio: "Tari Baba discusses the intersections of heritage, traditional Punjabi storytelling, and modern musical soundscapes.",
+                handle: "@taribaba",
+                img: "/tari_baba.png"
               },
               {
                 name: "ROOP SHARMA",

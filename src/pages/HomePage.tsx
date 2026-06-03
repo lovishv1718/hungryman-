@@ -130,12 +130,12 @@ function FeaturedTalksPreview() {
           <div className="lg:col-span-6">
             <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.85)] group">
               <img 
-                src="/guest_jass_manak.webp" 
-                width={1024}
-                height={1024}
+                src="/tari_baba.png" 
+                width={436}
+                height={236}
                 loading="lazy"
                 className="w-full h-full object-cover filter brightness-[0.8] contrast-[1.05] group-hover:scale-105 transition-transform duration-[1500ms] ease-out" 
-                alt="Jass Manak Spotlight" 
+                alt="Tari Baba Spotlight" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-6 left-6 z-20">
@@ -143,7 +143,7 @@ function FeaturedTalksPreview() {
                   SPOTLIGHT INTERVIEW
                 </span>
                 <h4 className="font-kanit text-2xl font-black text-white uppercase tracking-wider leading-none">
-                  JASS MANAK
+                  TARI BABA
                 </h4>
               </div>
               <div className="absolute top-4 right-4 z-20 px-2.5 py-1 rounded bg-black/75 backdrop-blur-md border border-white/10 text-[9px] font-mono tracking-widest text-white/90 uppercase flex items-center gap-2">
@@ -163,7 +163,11 @@ function FeaturedTalksPreview() {
             <p className="font-sans text-soft-cream-dim text-sm md:text-base leading-relaxed font-light mb-8 max-w-xl">
               Step inside the studio. Listen to deep-dive conversations with artists, directors, and cultural innovators who are shifting the landscape of Punjabi music worldwide.
             </p>
-            <div className="flex items-center gap-8 border-l border-white/10 pl-6 mb-8">
+            <div className="flex flex-wrap items-center gap-8 border-l border-white/10 pl-6 mb-8">
+              <div>
+                <span className="font-kanit text-3xl font-black text-white leading-none">280K+</span>
+                <span className="font-mono text-[9px] uppercase tracking-widest text-white/40 block mt-1">Video Views</span>
+              </div>
               <div>
                 <span className="font-kanit text-3xl font-black text-white leading-none">24K+</span>
                 <span className="font-mono text-[9px] uppercase tracking-widest text-white/40 block mt-1">Subscribers</span>
