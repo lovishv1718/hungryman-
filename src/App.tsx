@@ -488,7 +488,7 @@ export default function App() {
             </motion.div>
 
             {/* Movie Credits style directory links */}
-            <div className="w-full border-t border-white/5 pt-20 pb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-left md:text-center">
+            <div className="w-full border-t border-white/5 pt-20 pb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 text-left md:text-center">
               {/* Column 1: DIRECTORY */}
               <div className="flex flex-col md:items-center">
                 <h4 className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/30 mb-6 font-bold">DIRECTORY</h4>
@@ -507,6 +507,28 @@ export default function App() {
                       >
                         {item.label}
                       </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Column 2: SERVICES (Crawlable SEO Authority Pages) */}
+              <div className="flex flex-col md:items-center">
+                <h4 className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/30 mb-6 font-bold">SERVICES</h4>
+                <ul className="flex flex-col gap-3 font-sans text-xs text-soft-cream-dim font-light">
+                  {[
+                    { label: 'Graphic Designer Ludhiana', path: '/graphic-designer-ludhiana' },
+                    { label: 'Album Cover Designer Ludhiana', path: '/album-cover-designer-ludhiana' },
+                    { label: 'Video Production Ludhiana', path: '/video-production-ludhiana' },
+                    { label: 'Podcast Production Ludhiana', path: '/podcast-production-ludhiana' }
+                  ].map((item, idx) => (
+                    <li key={idx}>
+                      <a 
+                        href={item.path}
+                        className="hover:text-warm-orange transition-colors"
+                      >
+                        {item.label}
+                      </a>
                     </li>
                   ))}
                 </ul>
