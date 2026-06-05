@@ -961,3 +961,288 @@ html, body {
 .hero-visual-card:hover .hero-visual-img {
   transform: scale(1.05);
 }
+
+/* ==========================================================================
+   Visual Authority Upgrade Additions
+   ========================================================================== */
+
+/* Dual-Source Ambient Warm Orange Backlight Gradients */
+.hero-split {
+  background: radial-gradient(circle at 85% 25%, rgba(255, 92, 31, 0.08) 0%, rgba(0, 0, 0, 0) 60%), 
+              radial-gradient(circle at 15% 75%, rgba(255, 92, 31, 0.03) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+/* Custom Grid Columns for 40-45% Desktop Right-Side Dominance */
+@media (min-width: 1024px) {
+  .hero-grid-container-graphic {
+    grid-template-columns: 1.15fr 0.85fr; /* 42.5% right column width */
+  }
+  .hero-grid-container-podcast {
+    grid-template-columns: 1.1fr 0.9fr;    /* 45% right column width */
+  }
+  .hero-grid-container-video {
+    grid-template-columns: 1.05fr 0.95fr;  /* 47.5% right column width */
+  }
+  .hero-grid-container-album {
+    grid-template-columns: 1.05fr 0.95fr;  /* 47.5% right column width */
+  }
+}
+
+/* 1. Large-Scale Poster Collage (Graphic Designer Hero) */
+.collage-graphic-container {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage-graphic-container .collage-img {
+  position: absolute;
+  width: 200px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 2px solid rgba(0, 0, 0, 0.95);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), z-index 0.3s;
+}
+
+.collage-graphic-container .collage-img-1 {
+  transform: translate(-70px, -65px) rotate(-10deg);
+  z-index: 10;
+}
+
+.collage-graphic-container .collage-img-2 {
+  transform: translate(80px, -35px) rotate(8deg);
+  z-index: 9;
+}
+
+.collage-graphic-container .collage-img-3 {
+  transform: translate(-45px, 65px) rotate(6deg);
+  z-index: 8;
+}
+
+.collage-graphic-container .collage-img-4 {
+  transform: translate(85px, 85px) rotate(-6deg);
+  z-index: 11;
+}
+
+.collage-graphic-container:hover .collage-img-1 {
+  transform: translate(-85px, -80px) rotate(-14deg) scale(1.05);
+  z-index: 12;
+}
+
+.collage-graphic-container:hover .collage-img-2 {
+  transform: translate(95px, -45px) rotate(11deg) scale(1.05);
+  z-index: 12;
+}
+
+.collage-graphic-container:hover .collage-img-3 {
+  transform: translate(-55px, 80px) rotate(8deg) scale(1.05);
+  z-index: 12;
+}
+
+.collage-graphic-container:hover .collage-img-4 {
+  transform: translate(100px, 100px) rotate(-9deg) scale(1.05);
+  z-index: 12;
+}
+
+/* 2. Enlarged & Dominant Podcast Studio Card */
+.hero-studio-card-large {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 16/10;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 92, 31, 0.2);
+  box-shadow: 0 25px 55px rgba(255, 92, 31, 0.1), 0 30px 60px rgba(0, 0, 0, 0.95);
+  background-color: var(--color-charcoal);
+}
+
+.hero-studio-img-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) contrast(1.05);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-studio-card-large:hover .hero-studio-img-large {
+  transform: scale(1.04);
+}
+
+/* 3. Cinematic Director's Monitor & Viewfinder HUD (Video Production Hero) */
+.hero-video-monitor {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 16/9;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 45px rgba(255, 92, 31, 0.15), 0 30px 70px rgba(0, 0, 0, 0.95);
+  background-color: var(--color-black);
+}
+
+.hero-video-img-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8) contrast(1.15);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-video-monitor:hover .hero-video-img-large {
+  transform: scale(1.03);
+}
+
+.viewfinder-grid {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  pointer-events: none;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.viewfinder-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+}
+
+.viewfinder-corner.top-left {
+  top: 1rem;
+  left: 1rem;
+  border-right: none;
+  border-bottom: none;
+}
+
+.viewfinder-corner.top-right {
+  top: 1rem;
+  right: 1rem;
+  border-left: none;
+  border-bottom: none;
+}
+
+.viewfinder-corner.bottom-left {
+  bottom: 1rem;
+  left: 1rem;
+  border-right: none;
+  border-top: none;
+}
+
+.viewfinder-corner.bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+  border-left: none;
+  border-top: none;
+}
+
+.viewfinder-rec {
+  position: absolute;
+  top: 1.25rem;
+  left: 2.25rem;
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: #ff3b30;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  letter-spacing: 0.1em;
+}
+
+.viewfinder-rec::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #ff3b30;
+  border-radius: 50%;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
+.viewfinder-timecode {
+  position: absolute;
+  top: 1.25rem;
+  right: 2.25rem;
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.1em;
+}
+
+/* 4. Large-Scale Overlapping Collage (Album Cover Designer) */
+.collage-album-container {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage-album-container .collage-img {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), z-index 0.3s;
+}
+
+.collage-album-container .collage-img-1 {
+  transform: translate(-80px, -90px) rotate(-14deg);
+  z-index: 10;
+}
+
+.collage-album-container .collage-img-2 {
+  transform: translate(90px, -45px) rotate(10deg);
+  z-index: 9;
+}
+
+.collage-album-container .collage-img-3 {
+  transform: translate(-50px, 90px) rotate(6deg);
+  z-index: 8;
+}
+
+.collage-album-container .collage-img-4 {
+  transform: translate(100px, 100px) rotate(-8deg);
+  z-index: 11;
+}
+
+.collage-album-container:hover .collage-img-1 {
+  transform: translate(-100px, -110px) rotate(-18deg) scale(1.06);
+  z-index: 12;
+}
+
+.collage-album-container:hover .collage-img-2 {
+  transform: translate(110px, -60px) rotate(14deg) scale(1.06);
+  z-index: 12;
+}
+
+.collage-album-container:hover .collage-img-3 {
+  transform: translate(-65px, 110px) rotate(8deg) scale(1.06);
+  z-index: 12;
+}
+
+.collage-album-container:hover .collage-img-4 {
+  transform: translate(120px, 120px) rotate(-12deg) scale(1.06);
+  z-index: 12;
+}
