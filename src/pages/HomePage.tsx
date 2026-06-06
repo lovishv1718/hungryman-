@@ -319,7 +319,7 @@ export default function HomePage() {
               TWO WORLDS.<br />ONE VISION.
             </h2>
             <p className="font-sans text-soft-cream-dim text-sm md:text-base leading-relaxed font-light max-w-xl mx-auto mt-6">
-              Hungry Productions combines visual storytelling and meaningful conversations to build culture that lasts.
+              Hungry Productions combines visual storytelling and meaningful conversations to build culture that lasts. Founded by premium visual creator Sahilpreet Singh, HungryMan Designs has established itself as an authoritative creative agency in Punjab, directing iconic music visual campaigns, tour poster designs, and official album covers from our studio hub in Mohali. Serving artists and local businesses in Ludhiana and Chandigarh, we translate creative concepts into high-converting digital assets, helping brands define modern culture.
             </p>
           </motion.div>
 
@@ -411,14 +411,30 @@ export default function HomePage() {
               </p>
               
               <ul className="flex flex-col gap-4 mb-10 w-full border-l border-white/5 pl-6">
-                {['Poster Design', 'Album Covers', 'Artist Branding', 'Motion Graphics'].map((service, idx) => (
-                  <li key={idx} className="flex items-center gap-4 group/item cursor-pointer">
-                    <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
-                    <span className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium">
-                      {service}
-                    </span>
-                  </li>
-                ))}
+                <li className="flex items-center gap-4 group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
+                  <Link to="/graphic-designer-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
+                    Graphic Designer in Ludhiana
+                  </Link>
+                </li>
+                <li className="flex items-center gap-4 group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
+                  <Link to="/album-cover-designer-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
+                    Album Cover Designer in Ludhiana
+                  </Link>
+                </li>
+                <li className="flex items-center gap-4 group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
+                  <span className="text-xs uppercase tracking-widest text-soft-cream/70 font-medium">
+                    Artist Branding
+                  </span>
+                </li>
+                <li className="flex items-center gap-4 group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
+                  <span className="text-xs uppercase tracking-widest text-soft-cream/70 font-medium">
+                    Motion Graphics
+                  </span>
+                </li>
               </ul>
               
               <Link 
@@ -449,14 +465,30 @@ export default function HomePage() {
               </p>
               
               <ul className="flex flex-col gap-4 mb-10 w-full border-l border-white/5 pl-6">
-                {['Podcasts', 'Interviews', 'Industry Talks', 'Storytelling'].map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-4 group/item cursor-pointer">
-                    <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
-                    <span className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
+                <li className="flex items-center gap-4 group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
+                  <Link to="/podcast-production-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
+                    Podcast Production in Ludhiana
+                  </Link>
+                </li>
+                <li className="flex items-center gap-4 group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
+                  <Link to="/video-production-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
+                    Video Production in Ludhiana
+                  </Link>
+                </li>
+                <li className="flex items-center gap-4 group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
+                  <span className="text-xs uppercase tracking-widest text-soft-cream/70 font-medium">
+                    Industry Talks
+                  </span>
+                </li>
+                <li className="flex items-center gap-4 group/item">
+                  <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
+                  <span className="text-xs uppercase tracking-widest text-soft-cream/70 font-medium">
+                    Storytelling
+                  </span>
+                </li>
               </ul>
               
               <Link 
