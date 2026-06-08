@@ -413,15 +413,15 @@ export default function HomePage() {
               <ul className="flex flex-col gap-4 mb-10 w-full border-l border-white/5 pl-6">
                 <li className="flex items-center gap-4 group/item">
                   <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
-                  <Link to="/graphic-designer-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
+                  <a href="/graphic-designer-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
                     Graphic Designer in Ludhiana
-                  </Link>
+                  </a>
                 </li>
                 <li className="flex items-center gap-4 group/item">
                   <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
-                  <Link to="/album-cover-designer-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
+                  <a href="/album-cover-designer-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
                     Album Cover Designer in Ludhiana
-                  </Link>
+                  </a>
                 </li>
                 <li className="flex items-center gap-4 group/item">
                   <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
@@ -467,15 +467,15 @@ export default function HomePage() {
               <ul className="flex flex-col gap-4 mb-10 w-full border-l border-white/5 pl-6">
                 <li className="flex items-center gap-4 group/item">
                   <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
-                  <Link to="/podcast-production-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
+                  <a href="/podcast-production-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
                     Podcast Production in Ludhiana
-                  </Link>
+                  </a>
                 </li>
                 <li className="flex items-center gap-4 group/item">
                   <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
-                  <Link to="/video-production-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
+                  <a href="/video-production-ludhiana" className="text-xs uppercase tracking-widest text-soft-cream/70 group-hover/item:text-white transition-colors duration-300 font-medium hover:text-warm-orange">
                     Video Production in Ludhiana
-                  </Link>
+                  </a>
                 </li>
                 <li className="flex items-center gap-4 group/item">
                   <span className="w-1.5 h-1.5 rounded-full bg-warm-orange group-hover/item:scale-150 transition-transform duration-300" />
