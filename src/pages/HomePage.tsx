@@ -60,7 +60,7 @@ function FeaturedWorkPreview() {
   const previewPosters = [
     { src: '/poster 1.webp', artist: 'PARMISH VERMA', category: 'Official Tour Visuals', year: '2024', w: 872, h: 863 },
     { src: '/karan_aujla.jpeg', artist: 'KARAN AUJLA', category: 'Album Cover & Visual Identity', year: '2023', w: 1080, h: 1350 },
-    { src: '/khan_bhaini2.jpeg', artist: 'KHAN BHAINI', category: 'Cinematic Campaign Poster', year: '2023', w: 1074, h: 1600 }
+    { src: '/khan_bhaini2.jpeg', artist: 'KHAN BHAINI', category: 'Cinematic Campaign Poster', year: '2020', w: 1074, h: 1600 }
   ];
 
   return (
@@ -509,7 +509,7 @@ export default function HomePage() {
             >
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.85)] group cursor-pointer">
                 <img 
-                  src="/hungry_talks_studio.webp" 
+                  src="/hungry_talks_studio.jpg" 
                   width={1024}
                   height={1024}
                   loading="lazy"

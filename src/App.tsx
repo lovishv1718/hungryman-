@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Lenis from 'lenis';
 import { 
@@ -359,13 +359,17 @@ export default function App() {
                 { label: 'Talks', path: '/talks' },
                 { label: 'About', path: '/about' }
               ].map((link) => (
-                <Link 
+                <NavLink 
                   key={link.label} 
                   to={link.path}
-                  className="text-xs uppercase tracking-widest text-soft-cream/70 hover:text-warm-orange transition-colors duration-300 font-medium"
+                  className={({ isActive }) => 
+                    `text-xs uppercase tracking-widest transition-colors duration-300 ${
+                      isActive ? 'text-warm-orange font-semibold' : 'text-soft-cream/70 hover:text-warm-orange font-medium'
+                    }`
+                  }
                 >
                   {link.label}
-                </Link>
+                </NavLink>
               ))}
             </div>
 
@@ -402,14 +406,18 @@ export default function App() {
                   { label: 'Talks', path: '/talks' },
                   { label: 'About', path: '/about' }
                 ].map((link) => (
-                  <Link 
+                  <NavLink 
                     key={link.label} 
                     to={link.path}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-left text-sm uppercase tracking-widest text-soft-cream/80 hover:text-warm-orange transition-colors py-2 border-b border-white/5"
+                    className={({ isActive }) => 
+                      `text-left text-sm uppercase tracking-widest transition-colors py-2 border-b border-white/5 ${
+                        isActive ? 'text-warm-orange font-semibold' : 'text-soft-cream/80 hover:text-warm-orange'
+                      }`
+                    }
                   >
                     {link.label}
-                  </Link>
+                  </NavLink>
                 ))}
                 <button 
                   onClick={() => {

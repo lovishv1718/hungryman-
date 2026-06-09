@@ -136,11 +136,11 @@ export function BeforeAfterSlider({
 
 export function CarouselBeforeAfterSlider() {
   const carouselProjects = [
-    { id: 'inder', label: 'INDER CHAHAL', before: '/inder_chahal_before.png', after: '/inderchahal_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
-    { id: 'lucky', label: 'LUCKY VERMA', before: '/luckyverma_before.png', after: '/lucky_verma_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
-    { id: 'babbumaan', label: 'BABBU MAAN', before: '/babbumaan_before.png', after: '/babbumaan_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
-    { id: 'gulab', label: 'GULAB SIDHU', before: '/gulab_sidhu_before.png', after: '/gulab_sidhu_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
-    { id: 'amrinder', label: 'AMRINDER GILL', before: '/amrindergill_before.png', after: '/amrinder_gill_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 768, h: 960 }
+    { id: 'inder', label: 'INDER CHAHAL', before: '/inder_chahal_before.jpg', after: '/inderchahal_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
+    { id: 'lucky', label: 'LUCKY VERMA', before: '/luckyverma_before.jpg', after: '/lucky_verma_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
+    { id: 'babbumaan', label: 'BABBU MAAN', before: '/babbumaan_before.jpg', after: '/babbumaan_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
+    { id: 'gulab', label: 'GULAB SIDHU', before: '/gulab_sidhu_before.jpg', after: '/gulab_sidhu_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 1080, h: 1350 },
+    { id: 'amrinder', label: 'AMRINDER GILL', before: '/amrindergill_before.jpg', after: '/amrinder_gill_after.jpeg', beforeLabel: 'Raw Studio Capture', afterLabel: 'Final Graded Poster', w: 768, h: 960 }
   ];
 
   const [activeIndex, setActiveIndex] = useState(2); // Card 3 (index 2) starts centered!
@@ -251,25 +251,25 @@ export function CarouselBeforeAfterSlider() {
       </div>
 
       {/* Navigation Controls */}
-      <div className="flex items-center gap-6 mt-10 md:mt-14 z-30">
+      <div className="flex items-center gap-2 md:gap-6 mt-10 md:mt-14 z-30 max-w-full px-4">
         <button
           onClick={handlePrev}
-          className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-black/70 hover:bg-warm-orange hover:border-warm-orange text-white transition-all duration-300 hover:scale-105 cursor-pointer shadow-lg active:scale-95"
+          className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/10 flex items-center justify-center bg-black/70 hover:bg-warm-orange hover:border-warm-orange text-white transition-all duration-300 hover:scale-105 cursor-pointer shadow-lg active:scale-95 flex-shrink-0"
           aria-label="Previous Project"
         >
-          <ChevronLeft size={20} />
+          <ChevronLeft size={18} className="md:size-[20px]" />
         </button>
 
-        <span className="font-mono text-xs uppercase tracking-[0.25em] text-white/50 select-none min-w-[240px] text-center">
+        <span className="font-mono text-[10px] md:text-xs uppercase tracking-wider md:tracking-[0.25em] text-white/50 select-none min-w-[150px] md:min-w-[240px] text-center truncate px-2">
           {activeIndex + 1} / {carouselProjects.length} — <span className="text-white font-bold">{carouselProjects[activeIndex].label}</span>
         </span>
 
         <button
           onClick={handleNext}
-          className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center bg-black/70 hover:bg-warm-orange hover:border-warm-orange text-white transition-all duration-300 hover:scale-105 cursor-pointer shadow-lg active:scale-95"
+          className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/10 flex items-center justify-center bg-black/70 hover:bg-warm-orange hover:border-warm-orange text-white transition-all duration-300 hover:scale-105 cursor-pointer shadow-lg active:scale-95 flex-shrink-0"
           aria-label="Next Project"
         >
-          <ChevronRight size={20} />
+          <ChevronRight size={18} className="md:size-[20px]" />
         </button>
       </div>
     </div>

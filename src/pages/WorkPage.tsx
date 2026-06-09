@@ -42,8 +42,8 @@ interface FeaturedPoster {
 const featuredPosters: FeaturedPoster[] = [
   { src: '/poster 1.webp', title: 'Parmish Verma — Born to Shine', category: 'Official Tour Visuals', artist: 'PARMISH VERMA', year: '2024', w: 872, h: 863 },
   { src: '/karan_aujla.jpeg', title: 'Karan Aujla — Making Memories', category: 'Album Cover & Visual Identity', artist: 'KARAN AUJLA', year: '2023', w: 1080, h: 1350 },
-  { src: '/khan_bhaini2.jpeg', title: 'Khan Bhaini — Babiha', category: 'Cinematic Campaign Poster', artist: 'KHAN BHAINI', year: '2023', w: 1074, h: 1600 },
-  { src: '/poster 7.webp', title: 'Prabh Gill — Editorial Art', category: 'Single Artwork', artist: 'PRABH GILL', year: '2024', w: 700, h: 868 },
+  { src: '/khan_bhaini2.jpeg', title: 'Khan Bhaini — Babiha', category: 'Cinematic Campaign Poster', artist: 'KHAN BHAINI', year: '2020', w: 1074, h: 1600 },
+  { src: '/poster 7.webp', title: 'Gulab Sidhu — Editorial Art', category: 'Single Artwork', artist: 'GULAB SIDHU', year: '2024', w: 700, h: 868 },
 ];
 
 function FeaturedWorkSection() {
@@ -222,7 +222,7 @@ export default function WorkPage() {
         <div className="max-w-7xl mx-auto px-6 w-full flex flex-col justify-between items-center text-center relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 lg:gap-20 w-full mb-20">
             {[
-              { targetValue: 200, label: 'POSTERS CREATED', suffix: '+' },
+              { targetValue: 1600, label: 'POSTERS CREATED', suffix: '+' },
               { targetValue: 24, label: 'SUBSCRIBERS', suffix: 'K+' },
               { targetValue: 1300, label: 'VIDEOS PUBLISHED', suffix: '+' },
               { targetValue: 100, label: 'ARTISTS WORKED WITH', suffix: '+' }
